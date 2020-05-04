@@ -21,6 +21,7 @@
       </div><!-- /.col-md-3 -->
 
       <div class="col-md-9">
+        <%= render "layouts/messages" if !flash.empty? %>
         <%= yield %>
       </div>
     </div>
