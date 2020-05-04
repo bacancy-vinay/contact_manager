@@ -1,0 +1,1877 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (90.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (70.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateContacts (20200501091159)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "company" varchar, "phone" varchar, "address" varchar, "group_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_f79212077b"
+FOREIGN KEY ("group_id")
+  REFERENCES "groups" ("id")
+)[0m
+  ↳ db/migrate/20200501091159_create_contacts.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_contacts_on_group_id" ON "contacts" ("group_id")[0m
+  ↳ db/migrate/20200501091159_create_contacts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200501091159"]]
+  ↳ bin/rails:9
+  [1m[35m (80.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateGroups (20200501091212)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "groups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200501091212_create_groups.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200501091212"]]
+  ↳ bin/rails:9
+  [1m[35m (87.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-01 09:13:13.163364"], ["updated_at", "2020-05-01 09:13:13.163364"]]
+  ↳ bin/rails:9
+  [1m[35m (72.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2020-05-01 17:32:43 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (5.9ms)
+Completed 200 OK in 36ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mContact Load (10.4ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (7.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mGroup Create (0.3ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "friends"], ["created_at", "2020-05-01 12:18:00.965059"], ["updated_at", "2020-05-01 12:18:00.965059"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (62.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mGroup Create (0.3ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "family"], ["created_at", "2020-05-01 12:18:01.031378"], ["updated_at", "2020-05-01 12:18:01.031378"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (79.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mGroup Create (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "school"], ["created_at", "2020-05-01 12:18:01.114621"], ["updated_at", "2020-05-01 12:18:01.114621"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (70.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mGroup Destroy (0.2ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = ?[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (68.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mGroup Destroy (0.2ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = ?[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (67.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mGroup Destroy (0.3ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = ?[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (59.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mGroup Create (0.2ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "friends"], ["created_at", "2020-05-01 12:19:12.740452"], ["updated_at", "2020-05-01 12:19:12.740452"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (75.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mGroup Create (0.3ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "family"], ["created_at", "2020-05-01 12:19:12.820218"], ["updated_at", "2020-05-01 12:19:12.820218"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (79.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mGroup Create (0.3ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "school"], ["created_at", "2020-05-01 12:19:12.903694"], ["updated_at", "2020-05-01 12:19:12.903694"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (88.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mGroup Destroy (0.2ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = ?[0m  [["id", 4]]
+  ↳ db/seeds.rb:9
+  [1m[35m (66.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mGroup Destroy (0.3ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = ?[0m  [["id", 5]]
+  ↳ db/seeds.rb:9
+  [1m[35m (58.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mGroup Destroy (0.4ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = ?[0m  [["id", 6]]
+  ↳ db/seeds.rb:9
+  [1m[35m (37.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mGroup Create (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "friends"], ["created_at", "2020-05-01 12:20:17.310954"], ["updated_at", "2020-05-01 12:20:17.310954"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (61.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mGroup Create (0.3ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "family"], ["created_at", "2020-05-01 12:20:17.384773"], ["updated_at", "2020-05-01 12:20:17.384773"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (61.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mGroup Create (0.3ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "school"], ["created_at", "2020-05-01 12:20:17.450542"], ["updated_at", "2020-05-01 12:20:17.450542"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (63.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mGroup Destroy (1.0ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = ?[0m  [["id", 7]]
+  ↳ db/seeds.rb:9
+  [1m[35m (111.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mGroup Destroy (0.3ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = ?[0m  [["id", 8]]
+  ↳ db/seeds.rb:9
+  [1m[35m (37.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mGroup Destroy (0.3ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = ?[0m  [["id", 9]]
+  ↳ db/seeds.rb:9
+  [1m[35m (55.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mGroup Create (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "friends"], ["created_at", "2020-05-01 12:20:32.209132"], ["updated_at", "2020-05-01 12:20:32.209132"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (45.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mGroup Create (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "family"], ["created_at", "2020-05-01 12:20:32.258515"], ["updated_at", "2020-05-01 12:20:32.258515"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (46.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mGroup Create (0.3ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "school"], ["created_at", "2020-05-01 12:20:32.308261"], ["updated_at", "2020-05-01 12:20:32.308261"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (63.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.4ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Shaun Kshlerin"], ["email", "ellsworth_emard@blanda.net"], ["company", "Corkery-Murazik"], ["phone", "1-965-224-3012"], ["address", "332 Natalie Grove Wisozkland"], ["group_id", 12], ["created_at", "2020-05-01 12:20:32.504504"], ["updated_at", "2020-05-01 12:20:32.504504"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (49.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mr. Philip Bailey"], ["email", "jeremiah@lynch.com"], ["company", "Kuhn-O'Conner"], ["phone", "667.523.3100"], ["address", "89175 Armand Row Parkerberg"], ["group_id", 10], ["created_at", "2020-05-01 12:20:32.559584"], ["updated_at", "2020-05-01 12:20:32.559584"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (62.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.4ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ranae Osinski"], ["email", "olen@abshire.net"], ["company", "King-Franecki"], ["phone", "(126) 192-0649"], ["address", "3698 Kilback Island Kiehnmouth"], ["group_id", 12], ["created_at", "2020-05-01 12:20:32.626236"], ["updated_at", "2020-05-01 12:20:32.626236"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (44.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.4ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Augustus Lebsack"], ["email", "philip@mertz.info"], ["company", "Hackett, Bartoletti and Gulgowski"], ["phone", "408.616.4616"], ["address", "715 Chadwick Row East Vernon"], ["group_id", 12], ["created_at", "2020-05-01 12:20:32.677063"], ["updated_at", "2020-05-01 12:20:32.677063"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (43.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Stefanie Bailey"], ["email", "dewayne@krisweimann.biz"], ["company", "Raynor and Sons"], ["phone", "1-403-536-0596"], ["address", "88738 Stark Run New Dorsey"], ["group_id", 10], ["created_at", "2020-05-01 12:20:32.726740"], ["updated_at", "2020-05-01 12:20:32.726740"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (61.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.4ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Leif Bechtelar"], ["email", "morgan.mayert@williamson.biz"], ["company", "Leannon and Sons"], ["phone", "1-857-063-5629"], ["address", "7025 Darrel Cliffs Gradystad"], ["group_id", 10], ["created_at", "2020-05-01 12:20:32.793776"], ["updated_at", "2020-05-01 12:20:32.793776"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (43.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.4ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Odelia Will"], ["email", "jerrell@hane.net"], ["company", "DuBuque, Spinka and Schinner"], ["phone", "432-787-0700"], ["address", "6913 Schneider Mountains Lueilwitzmouth"], ["group_id", 11], ["created_at", "2020-05-01 12:20:32.843297"], ["updated_at", "2020-05-01 12:20:32.843297"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (60.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jeremy Weissnat"], ["email", "morris@altenwerth.co"], ["company", "Dickinson LLC"], ["phone", "(248) 287-0779"], ["address", "437 Forrest Stravenue West Zoe"], ["group_id", 11], ["created_at", "2020-05-01 12:20:32.908150"], ["updated_at", "2020-05-01 12:20:32.908150"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (71.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.4ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ms. Tynisha Cummerata"], ["email", "sam@buckridge.biz"], ["company", "Quigley-Abshire"], ["phone", "(781) 017-8245"], ["address", "9308 Turcotte Park Lake Judithbury"], ["group_id", 10], ["created_at", "2020-05-01 12:20:32.985220"], ["updated_at", "2020-05-01 12:20:32.985220"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (51.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Marvin Murazik"], ["email", "clark_okon@kilback.org"], ["company", "Witting, Crooks and Swaniawski"], ["phone", "757.447.2731"], ["address", "812 Luettgen Motorway Port Echoborough"], ["group_id", 11], ["created_at", "2020-05-01 12:20:33.041744"], ["updated_at", "2020-05-01 12:20:33.041744"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (52.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mContact Load (1.0ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "contacts"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (63.8ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "company" varchar, "phone" varchar, "address" varchar, "group_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (59.5ms)[0m  [1m[35mCREATE  INDEX "index_contacts_on_group_id" ON "contacts" ("group_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "groups"[0m
+  ↳ db/schema.rb:27
+  [1m[35m (64.0ms)[0m  [1m[35mCREATE TABLE "groups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (64.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (52.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200501091212)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (48.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200501091159);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (71.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-01 12:30:06.355643"], ["updated_at", "2020-05-01 12:30:06.355643"]]
+  ↳ db/schema.rb:13
+  [1m[35m (51.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "contacts"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (72.8ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "company" varchar, "phone" varchar, "address" varchar, "group_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (74.5ms)[0m  [1m[35mCREATE  INDEX "index_contacts_on_group_id" ON "contacts" ("group_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "groups"[0m
+  ↳ db/schema.rb:27
+  [1m[35m (123.2ms)[0m  [1m[35mCREATE TABLE "groups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (56.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (41.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200501091212)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (40.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200501091159);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (56.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-01 12:30:06.896011"], ["updated_at", "2020-05-01 12:30:06.896011"]]
+  ↳ db/schema.rb:13
+  [1m[35m (44.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2020-05-01 12:30:06.945288"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (37.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mGroup Create (0.1ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "friends"], ["created_at", "2020-05-01 12:30:06.996918"], ["updated_at", "2020-05-01 12:30:06.996918"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (34.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mGroup Create (0.3ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "family"], ["created_at", "2020-05-01 12:30:07.034924"], ["updated_at", "2020-05-01 12:30:07.034924"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (46.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mGroup Create (0.3ms)[0m  [1m[32mINSERT INTO "groups" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "school"], ["created_at", "2020-05-01 12:30:07.084630"], ["updated_at", "2020-05-01 12:30:07.084630"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (45.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.2ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Major Hahn"], ["email", "ashley@pfeffer.info"], ["company", "McKenzie-Stoltenberg"], ["phone", "667.905.8912"], ["address", "54866 Hilario Rest North Bree"], ["group_id", 1], ["created_at", "2020-05-01 12:30:07.242372"], ["updated_at", "2020-05-01 12:30:07.242372"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (49.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alfonzo Tremblay"], ["email", "yahaira@thompsonhilll.net"], ["company", "Reichel-Wolff"], ["phone", "155.704.2552"], ["address", "34651 Armstrong Valley Donnellberg"], ["group_id", 3], ["created_at", "2020-05-01 12:30:07.294115"], ["updated_at", "2020-05-01 12:30:07.294115"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (44.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ceola Schimmel"], ["email", "lanny@kaulke.biz"], ["company", "Jakubowski, Schultz and Greenholt"], ["phone", "1-494-087-0494"], ["address", "973 Jaskolski Rest Gutmannhaven"], ["group_id", 1], ["created_at", "2020-05-01 12:30:07.343352"], ["updated_at", "2020-05-01 12:30:07.343352"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (46.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Benedict Abbott"], ["email", "otto.welch@paucek.info"], ["company", "Waters Group"], ["phone", "503.439.8655"], ["address", "6372 Maryjane Pine West Chrisstad"], ["group_id", 2], ["created_at", "2020-05-01 12:30:07.394424"], ["updated_at", "2020-05-01 12:30:07.394424"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (44.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Candyce Altenwerth"], ["email", "frank@schuster.info"], ["company", "Schiller Inc"], ["phone", "(499) 434-9096"], ["address", "6829 Mohamed Stream Corenemouth"], ["group_id", 1], ["created_at", "2020-05-01 12:30:07.443160"], ["updated_at", "2020-05-01 12:30:07.443160"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (46.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miss Julianne Haag"], ["email", "carmine.hickle@smith.org"], ["company", "Stanton and Sons"], ["phone", "804-909-7922"], ["address", "8650 Herzog Lodge Port Wanita"], ["group_id", 2], ["created_at", "2020-05-01 12:30:07.493007"], ["updated_at", "2020-05-01 12:30:07.493007"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (45.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miss Lenna Dibbert"], ["email", "kip_von@medhurstdare.biz"], ["company", "Kassulke, Witting and Roob"], ["phone", "246.185.3338"], ["address", "59216 Kennith Causeway Nienowside"], ["group_id", 3], ["created_at", "2020-05-01 12:30:07.543672"], ["updated_at", "2020-05-01 12:30:07.543672"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (45.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pablo Walsh"], ["email", "bruno_kutch@schultzgrimes.info"], ["company", "Armstrong-Rogahn"], ["phone", "1-159-777-5127"], ["address", "5969 Lamont Gardens West Deane"], ["group_id", 1], ["created_at", "2020-05-01 12:30:07.593586"], ["updated_at", "2020-05-01 12:30:07.593586"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (45.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mrs. Chang Thiel"], ["email", "mistie_mohr@goldner.co"], ["company", "Zieme Group"], ["phone", "508-897-1373"], ["address", "683 Kuphal Walk Lake Marilee"], ["group_id", 2], ["created_at", "2020-05-01 12:30:07.643776"], ["updated_at", "2020-05-01 12:30:07.643776"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (44.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mContact Create (0.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "company", "phone", "address", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Matha Kunde"], ["email", "elvis_bogan@deckow.org"], ["company", "Wilkinson, Nolan and Muller"], ["phone", "1-930-759-9205"], ["address", "689 Larkin Rapid Lake Cyril"], ["group_id", 2], ["created_at", "2020-05-01 12:30:07.693105"], ["updated_at", "2020-05-01 12:30:07.693105"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (45.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mContact Load (1.0ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2020-05-04 13:57:32 +0530
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 32ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2020-05-04 13:57:42 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contacts"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mContact Load (0.9ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/contacts" for 127.0.0.1 at 2020-05-04 14:03:43 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contacts"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contacts" for 127.0.0.1 at 2020-05-04 14:03:44 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contacts"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contacts" for 127.0.0.1 at 2020-05-04 14:04:16 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contacts"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contacts" for 127.0.0.1 at 2020-05-04 14:04:17 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contacts"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contacts" for 127.0.0.1 at 2020-05-04 14:05:05 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/contacts"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:05:09 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 418ms (Views: 416.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2020-05-04 14:06:01 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contacts"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contacts" for 127.0.0.1 at 2020-05-04 14:06:10 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contacts"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contact" for 127.0.0.1 at 2020-05-04 14:06:13 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contact"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contacts/index" for 127.0.0.1 at 2020-05-04 14:06:17 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/index" for 127.0.0.1 at 2020-05-04 14:08:57 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2354ms (Views: 2350.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/index" for 127.0.0.1 at 2020-05-04 14:12:51 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/assets/config
+  /home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/assets/images
+  /home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/assets/javascripts
+  /home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/assets/stylesheets
+  /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/actioncable-5.2.4.2/lib/assets/compiled
+  /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/activestorage-5.2.4.2/app/assets/javascripts
+  /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/actionview-5.2.4.2/lib/assets/compiled
+  /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/node_modules
+  /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/bootstrap-sass-3.4.1/assets/fonts
+  /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/bootstrap-sass-3.4.1/assets/images):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/assets/javascripts/application.js:12
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___4549780949697026806_69983099698580'
+Started GET "/contacts/index" for 127.0.0.1 at 2020-05-04 14:13:03 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1453ms (Views: 1449.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/index" for 127.0.0.1 at 2020-05-04 14:18:18 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/assets/css/bootstrap.min.css" for 127.0.0.1 at 2020-05-04 14:18:19 +0530
+Started GET "/contacts/assets/css/custom.css" for 127.0.0.1 at 2020-05-04 14:18:19 +0530
+Started GET "/contacts/assets/js/jquery.min.js" for 127.0.0.1 at 2020-05-04 14:18:19 +0530
+  
+  
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/css/bootstrap.min.css"):
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/css/custom.css"):
+  
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/js/jquery.min.js"):
+  
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contacts/assets/js/bootstrap.min.js" for 127.0.0.1 at 2020-05-04 14:18:19 +0530
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/js/bootstrap.min.js"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contacts/assets/css/custom.css" for 127.0.0.1 at 2020-05-04 14:18:19 +0530
+Started GET "/contacts/assets/css/bootstrap.min.css" for 127.0.0.1 at 2020-05-04 14:18:19 +0530
+Started GET "/contacts/assets/js/jquery.min.js" for 127.0.0.1 at 2020-05-04 14:18:19 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/css/custom.css"):
+  
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/js/jquery.min.js"):
+  
+  
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/css/bootstrap.min.css"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contacts/assets/js/bootstrap.min.js" for 127.0.0.1 at 2020-05-04 14:18:19 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/js/bootstrap.min.js"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contacts/index" for 127.0.0.1 at 2020-05-04 14:18:34 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/assets/js/jquery.min.js" for 127.0.0.1 at 2020-05-04 14:18:34 +0530
+Started GET "/contacts/assets/js/bootstrap.min.js" for 127.0.0.1 at 2020-05-04 14:18:34 +0530
+Started GET "/contacts/assets/css/bootstrap.min.css" for 127.0.0.1 at 2020-05-04 14:18:34 +0530
+Started GET "/contacts/assets/css/custom.css" for 127.0.0.1 at 2020-05-04 14:18:34 +0530
+  
+  
+  
+  
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/js/bootstrap.min.js"):
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/css/custom.css"):
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/js/jquery.min.js"):
+  
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/css/bootstrap.min.css"):
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contacts/index" for 127.0.0.1 at 2020-05-04 14:18:36 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/assets/js/jquery.min.js" for 127.0.0.1 at 2020-05-04 14:18:36 +0530
+Started GET "/contacts/assets/js/bootstrap.min.js" for 127.0.0.1 at 2020-05-04 14:18:36 +0530
+Started GET "/contacts/assets/css/bootstrap.min.css" for 127.0.0.1 at 2020-05-04 14:18:36 +0530
+Started GET "/contacts/assets/css/custom.css" for 127.0.0.1 at 2020-05-04 14:18:36 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/js/jquery.min.js"):
+  
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/css/bootstrap.min.css"):
+  
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/js/bootstrap.min.js"):
+  
+ActionController::RoutingError (No route matches [GET] "/contacts/assets/css/custom.css"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/contacts/index" for 127.0.0.1 at 2020-05-04 14:40:12 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_navbar, application/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    10:   </head>
+    11: 
+    12:   <body>
+    13:     <%= render 'navbar'%>
+    14:     <%= yield %>
+    15:   </body>
+    16: </html>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___567277776514018404_70356646997540'
+Started GET "/contacts/index" for 127.0.0.1 at 2020-05-04 14:40:29 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_navbar, application/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    10:   </head>
+    11: 
+    12:   <body>
+    13:     <%= render partial:'navbar'%>
+    14:     <%= yield %>
+    15:   </body>
+    16: </html>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___567277776514018404_70356653648680'
+Started GET "/contacts/index" for 127.0.0.1 at 2020-05-04 14:40:30 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_navbar, application/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    10:   </head>
+    11: 
+    12:   <body>
+    13:     <%= render partial:'navbar'%>
+    14:     <%= yield %>
+    15:   </body>
+    16: </html>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___567277776514018404_70356659043840'
+Started GET "/contacts/index" for 127.0.0.1 at 2020-05-04 14:40:31 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_navbar, application/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    10:   </head>
+    11: 
+    12:   <body>
+    13:     <%= render partial:'navbar'%>
+    14:     <%= yield %>
+    15:   </body>
+    16: </html>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___567277776514018404_70356650117340'
+Started GET "/contacts/index" for 127.0.0.1 at 2020-05-04 14:42:16 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_navbar, application/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    10:   </head>
+    11: 
+    12:   <body>
+    13:     <%= render 'navbar'%>
+    14:     <%= yield %>
+    15:   </body>
+    16: </html>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___567277776514018404_70356655636200'
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:42:29 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_navbar, application/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    10:   </head>
+    11: 
+    12:   <body>
+    13:     <%= render 'navbar'%>
+    14:     <%= yield %>
+    15:   </body>
+    16: </html>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___567277776514018404_70356660526740'
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:42:32 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_navbar, application/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    10:   </head>
+    11: 
+    12:   <body>
+    13:     <%= render 'navbar'%>
+    14:     <%= yield %>
+    15:   </body>
+    16: </html>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___567277776514018404_70356652312920'
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:42:32 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_navbar, application/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    10:   </head>
+    11: 
+    12:   <body>
+    13:     <%= render 'navbar'%>
+    14:     <%= yield %>
+    15:   </body>
+    16: </html>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___567277776514018404_70356656733240'
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:42:33 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_navbar, application/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    10:   </head>
+    11: 
+    12:   <body>
+    13:     <%= render 'navbar'%>
+    14:     <%= yield %>
+    15:   </body>
+    16: </html>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___567277776514018404_70356638117860'
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:42:34 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_navbar, application/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    10:   </head>
+    11: 
+    12:   <body>
+    13:     <%= render 'navbar'%>
+    14:     <%= yield %>
+    15:   </body>
+    16: </html>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___567277776514018404_70356648308440'
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:43:08 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:43:49 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1041ms (Views: 1039.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:46:42 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_navbar, application/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    13: <body>
+    14: 
+    15:   <nav class="navbar navbar-default navbar-fixed-top">
+    16:     <%= render 'navbar'%>
+    17:   </nav>
+    18: 
+    19:   <!-- content -->
+  
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___567277776514018404_70356660937000'
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:46:43 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_navbar, application/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    13: <body>
+    14: 
+    15:   <nav class="navbar navbar-default navbar-fixed-top">
+    16:     <%= render 'navbar'%>
+    17:   </nav>
+    18: 
+    19:   <!-- content -->
+  
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___567277776514018404_70356651655920'
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:46:54 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:47:18 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:50:24 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:50:26 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:51:08 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:59:53 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:59:56 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:59:56 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:59:57 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:59:57 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:59:57 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 14:59:57 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:00:06 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:00:14 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views/layouts/_navbar.html.erb:12: syntax error, unexpected tLABEL
+...;@output_buffer.append=( class: 'navbar-brand text-uppercase...
+...                         ^~~~~~):
+  
+app/views/layouts/_navbar.html.erb:12: syntax error, unexpected tLABEL
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___567277776514018404_70356659283600'
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:01:07 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:01:09 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:01:10 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:01:10 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:01:10 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:01:11 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:01:16 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:01:16 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:01:17 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:01:18 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/form.html" for 127.0.0.1 at 2020-05-04 15:01:21 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/form.html"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:01:22 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
