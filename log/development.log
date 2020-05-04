@@ -1875,3 +1875,308 @@ Processing by ContactsController#index as HTML
 Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:20:38 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vinshaku/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 228ms (Views: 222.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:20:40 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:20:41 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:20:42 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mContact Load (0.5ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:23:22 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:3
+  Rendered contacts/index.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:24:45 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:3
+  Rendered contacts/index.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `compnay' for #<Contact:0x00007f12647c1910>
+Did you mean?  company):
+    12:           <div class="media-body">
+    13:             <h4 class="media-heading"><%= contact.name %></h4>
+    14:             <address>
+    15:               <strong><%= contact.compnay %></strong><br>
+    16:               <%= contact.email %>
+    17:             </address>
+    18:           </div>
+  
+app/views/contacts/index.html.erb:15:in `block in _app_views_contacts_index_html_erb___1805205823431956020_69858486068300'
+app/views/contacts/index.html.erb:3:in `_app_views_contacts_index_html_erb___1805205823431956020_69858486068300'
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:24:53 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:3
+  Rendered contacts/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:27:13 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:3
+  Rendered contacts/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_contact with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    1: <div class="panel panel-default">
+    2:   <table class="table">
+    3:     <%= render @contacts%>
+    4: 
+    5:   </table>
+    6: </div>
+  
+app/views/contacts/index.html.erb:3:in `_app_views_contacts_index_html_erb___1805205823431956020_69858589468400'
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:28:00 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:3
+  Rendered contacts/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_contact with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    1: <div class="panel panel-default">
+    2:   <table class="table">
+    3:     <%= render @contacts %> 
+    4:   </table>
+    5: </div>
+    6: 
+  
+app/views/contacts/index.html.erb:3:in `_app_views_contacts_index_html_erb___1805205823431956020_69858482816200'
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:28:01 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:3
+  Rendered contacts/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_contact with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    1: <div class="panel panel-default">
+    2:   <table class="table">
+    3:     <%= render @contacts %> 
+    4:   </table>
+    5: </div>
+    6: 
+  
+app/views/contacts/index.html.erb:3:in `_app_views_contacts_index_html_erb___1805205823431956020_69858591728000'
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:28:02 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:3
+  Rendered contacts/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_contact with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    1: <div class="panel panel-default">
+    2:   <table class="table">
+    3:     <%= render @contacts %> 
+    4:   </table>
+    5: </div>
+    6: 
+  
+app/views/contacts/index.html.erb:3:in `_app_views_contacts_index_html_erb___1805205823431956020_69858483562820'
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:28:03 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.1ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:3
+  Rendered contacts/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_contact with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    1: <div class="panel panel-default">
+    2:   <table class="table">
+    3:     <%= render @contacts %> 
+    4:   </table>
+    5: </div>
+    6: 
+  
+app/views/contacts/index.html.erb:3:in `_app_views_contacts_index_html_erb___1805205823431956020_69858593552860'
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:28:04 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:3
+  Rendered contacts/index.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial contacts/_contact with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vinshaku/Rails Training Projects/PROJECT3/contact_manager/app/views"
+):
+    1: <div class="panel panel-default">
+    2:   <table class="table">
+    3:     <%= render @contacts %> 
+    4:   </table>
+    5: </div>
+    6: 
+  
+app/views/contacts/index.html.erb:3:in `_app_views_contacts_index_html_erb___1805205823431956020_69858604841520'
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:29:15 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:3
+  Rendered collection of contacts/_contact.html.erb [10 times] (1.2ms)
+  Rendered contacts/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:31:54 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:6
+  Rendered collection of contacts/_contact.html.erb [10 times] (0.5ms)
+  Rendered contacts/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:33:07 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:1
+  Rendered collection of contacts/_contact.html.erb [10 times] (0.7ms)
+  Rendered contacts/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:33:11 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:1
+  Rendered collection of contacts/_contact.html.erb [10 times] (0.4ms)
+  Rendered contacts/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:37:05 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:1
+  Rendered collection of contacts/_contact.html.erb [10 times] (13.4ms)
+  Rendered contacts/index.html.erb within layouts/application (21.2ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `email_address' for #<Contact:0x00007f1271a68710>
+Did you mean?  email_was):
+    3:     <div class="media">
+    4:       <div class="media-left">
+    5:         <a href="#">
+    6:           <%= image_tag contact.gravatar, class: "media-object" %>
+    7:         </a>
+    8:       </div>
+    9:       <div class="media-body">
+  
+app/models/contact.rb:5:in `gravatar'
+app/views/contacts/_contact.html.erb:6:in `_app_views_contacts__contact_html_erb___2695374640876266349_69858596395420'
+app/views/contacts/index.html.erb:8:in `_app_views_contacts_index_html_erb___1805205823431956020_69858597482840'
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:37:23 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:1
+  Rendered collection of contacts/_contact.html.erb [10 times] (1.3ms)
+  Rendered contacts/index.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 54ms (Views: 50.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-04 15:38:12 +0530
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:1
+  Rendered collection of contacts/_contact.html.erb [10 times] (0.9ms)
+  Rendered contacts/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.3ms)
+
+
