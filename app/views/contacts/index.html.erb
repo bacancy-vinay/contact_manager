@@ -1,15 +1,17 @@
-<% if @contacts.blank? %>
-<div class="alert alert-warning">
-  <strong>record not found </strong>
-</div>
-<% end %>
 <div class="panel panel-default">
   <table class="table">
-    <%= render @contacts %> 
+    <%= render @contacts %>
   </table>
+
+  <% if @contacts.blank? %>
+  <div class="panel-foooter message">
+    <div class="alert alert-warning">
+      <strong>record not found </strong>
+    </div>
+  </div>
+  <% end %>
 </div>
 
 <div class="text-center">
   <%= paginate @contacts %>
 </div>
-
