@@ -1,0 +1,37 @@
+<tr>
+  <td class="middle">
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <% if contact.avatar.attached? %>
+          <%= image_tag contact.avatar.variant(combine_options: {
+      auto_orient: true,
+      gravity: "center",
+      resize: "100x100^",
+      crop: "100x100+0+0"
+      }) %>
+          <% else%>
+                <img src="http://placehold.it/100x100" alt="Photo">
+          <% end %>
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading"><%= contact.name %></h4>
+        <address>
+          <strong><%= contact.company %></strong><br>
+          <%= contact.email %>
+        </address>
+      </div>
+    </div>
+  </td>
+  <td width="100" class="middle">
+    <div>
+      <%= link_to edit_contact_path(contact), class: "btn btn-circle btn-default btn-xs", title: "edit" do %>
+        <i class="glyphicon glyphicon-edit"></i>
+      <% end %>
+       <%= link_to contact_path(contact), method: :delete, class: "btn btn-circle btn-danger btn-xs", title: "delete", data: {confirm: "Are you sure?"} do %>
+        <i class="glyphicon glyphicon-remove"></i>
+      <% end %>
+    </div>
+  </td>
+</tr>
