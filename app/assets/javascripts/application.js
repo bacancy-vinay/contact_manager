@@ -12,7 +12,20 @@
 //= require jquery
 //= require jasny-bootstrap.min
 //= require bootstrap-sprockets
+//= require jquery-ui
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(document).on('turbolinks:load', function () {
+  $('#term').autocomplete({
+    source: "/contacts/autocomplete",
+    minLength: 3,
+    select: function (event, ui) {
+      $('#term').val(ui.item.value);
+      $(this).closest('form').submit();
+    }
+  });
+});
+

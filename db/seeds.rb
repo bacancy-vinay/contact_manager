@@ -16,7 +16,7 @@ group_ids << Group.create(name:"school").id
 group_count = group_ids.length
 puts "#{group_ids.count} created"
 
-number_of_contacts = 10
+number_of_contacts = 20
 
 contacts = []
 
