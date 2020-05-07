@@ -1,15 +1,16 @@
 # frozen_string_literal: true
 
 class ContactsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_contact, only: %w[edit update destroy]
 
   def index
     session[:selected_group_id] = params[:group_id]
-    @contacts = Contact.by_group(params[:group_id]).search(params[:term]).order(created_at: :desc).page(params[:page])
+    @contacts = current_user.contacts.by_group(params[:group_id]).search(params[:term]).order(created_at: :desc).page(params[:page])
   end
 
   def autocomplete
-    @contacts = Contact.search(params[:term]).order(created_at: :desc).page(params[:page])
+    @contacts = current_user.contacts.search(params[:term]).order(created_at: :desc).page(params[:page])
   end
 
   def new
@@ -17,7 +18,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(contact_params)
+    @contact = current_user.contacts.build(contact_params)
     if @contact.save
       flash[:success] = 'Contact was created'
       redirect_to contacts_path(previous_query_string)
@@ -26,9 +27,12 @@ class ContactsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    authorize @contact
+  end
 
   def update
+    authorize @contact
     if @contact.update(contact_params)
       flash[:success] = 'contact was successfully updated.'
       redirect_to contacts_path(previous_query_string)
