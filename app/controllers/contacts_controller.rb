@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class ContactsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_contact, only: %w[edit update destroy]
 
   def index

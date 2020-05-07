@@ -1,28 +1,36 @@
-<div class="panel panel-default">
-  <div class="panel-heading clearfix">
-    <div class="pull-left">
-      <h4>All Contacts</h4>
+<div class="col-md-3">
+  <%= render 'layouts/sidebar'%>
+</div><!-- /.col-md-3 -->
+<div class="col-md-9">
+  <!-- <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>-->
+  <%= render "layouts/messages" if !flash.empty? %>
+  <div class="panel panel-default">
+    <div class="panel-heading clearfix">
+      <div class="pull-left">
+        <h4>All Contacts</h4>
+      </div>
+      <div class="pull-right">
+        <%= link_to new_contact_path, class: 'btn btn-default' do %>
+        <i class="glyphicon glyphicon-plus"></i>
+        Add Contact
+        <% end %>
+      </div>
     </div>
-    <div class="pull-right">
-      <%= link_to new_contact_path, class: 'btn btn-default' do %>
-      <i class="glyphicon glyphicon-plus"></i>
-      Add Contact
-      <% end %>
-    </div>
-  </div>
-  <table class="table">
-    <%= render @contacts %>
-  </table>
+    <table class="table">
+      <%= render @contacts %>
+    </table>
 
-  <% if @contacts.blank? %>
-  <div class="panel-foooter message">
-    <div class="alert alert-warning">
-      <strong>record not found </strong>
+    <% if @contacts.blank? %>
+    <div class="panel-foooter message">
+      <div class="alert alert-warning">
+        <strong>record not found </strong>
+      </div>
     </div>
+    <% end %>
   </div>
-  <% end %>
-</div>
 
-<div class="text-center">
-  <%= paginate @contacts %>
+  <div class="text-center">
+    <%= paginate @contacts %>
+  </div>
 </div>
