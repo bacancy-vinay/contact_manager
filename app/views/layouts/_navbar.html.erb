@@ -16,6 +16,9 @@
 
 
       <% if !user_signed_in? %>
+      <ul class="nav navbar-nav">
+        <li class="<%= active_item('dashboard') %>"><%= link_to "Dashboard", home_index_path %></li>
+      </ul>
       <div class="navbar-right">
         <%= link_to "Login", new_user_session_path, class: "btn btn-default navbar-btn"  %>
         <%= link_to "Register", new_user_registration_path, class: "btn btn-primary navbar-btn" %>

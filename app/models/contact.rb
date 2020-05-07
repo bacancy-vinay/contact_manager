@@ -2,6 +2,7 @@
 
 class Contact < ApplicationRecord
   belongs_to :group
+  belongs_to :user
   has_one_attached :avatar
 
   validates :name, :email, :group_id, presence: true
