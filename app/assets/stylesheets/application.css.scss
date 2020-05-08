@@ -9,9 +9,10 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
+ *= require_tree .
  *= require jasny-bootstrap.min
  *= require jquery-ui
- *= require_tree .
+ *= require toastr
  *= require_self
  */
 
@@ -48,7 +49,9 @@ body {
 	padding: 10px 0;
 }
 
-.media img, .fileinput .thumbnail, .thumbnail img {
+.media img,
+.fileinput .thumbnail,
+.thumbnail img {
 	border-radius: 50%;
 }
 
@@ -66,13 +69,13 @@ body {
 }
 
 .btn-circle {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-  line-height: 1.428571429;
-  border-radius: 15px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	padding: 6px 0;
+	font-size: 12px;
+	line-height: 1.428571429;
+	border-radius: 15px;
 }
 
 .panel-footer.message {
@@ -89,6 +92,7 @@ body {
 	z-index: 9999 !important;
 	width: 196px;
 }
+
 .jumbotron {
 	background-color: white;
 }
