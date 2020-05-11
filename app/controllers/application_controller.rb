@@ -6,8 +6,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized 
   rescue_from ActiveRecord::RecordNotFound, with: :show_404
+  helper_method :previous_query_string
   # before_action :configure_permitted_parameters, if: :devise_controller?
-
+  def previous_query_string
+    session[:selected_group_id] ? { group_id: session[:selected_group_id] } : {}
+  end
+ 
   private
 
   def user_not_authorized

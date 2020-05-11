@@ -1,0 +1,8 @@
+$('#form-modal-title').html("<i class='glyphicon glyphicon-plus'></i>Add New Contact");
+$('#form-modal-body').html('<%= j render("form", hide_buttons: true) %>');
+$('#form-modal').modal('show');
+$('#form-modal-save-btn').click(function() {
+  $('#new_contact').submit();
+});
+$('#add-new-group').hide();
+
