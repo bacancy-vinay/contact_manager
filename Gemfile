@@ -5,6 +5,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'client_side_validations'
+
 gem 'devise'
 
 gem 'faker'
